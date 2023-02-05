@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  MyLightsailInstance:
+    Type: AWS::Lightsail::Instance
+    Properties:
+      BlueprintId: node_js
+      BundleId: micro_1_0
+      InstanceName: nestjs-instance
+  NestJS:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: NestJS
+      Handler: App.startAdminJS
+      Runtime: nodejs14.x
+      Events:
+        GetEvent:
+          Type: Api
+          Properties:
+            Path: /
+            Method: get
+    Metadata:
+      SamResourceId: NestJS

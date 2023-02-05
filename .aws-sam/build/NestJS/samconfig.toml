@@ -1,0 +1,13 @@
+version = 0.1
+[uat]
+[uat.deploy]
+[uat.deploy.parameters]
+stack_name = "admin-panel"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-u5szlud54o2u"
+s3_prefix = "admin-panel"
+region = "ap-south-1"
+profile = "experiment"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []
