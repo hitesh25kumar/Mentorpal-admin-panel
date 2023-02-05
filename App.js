@@ -76,6 +76,6 @@ const adminOptions = {
   })
 }
 
-// startAdminJS()
+startAdminJS()
 
 
