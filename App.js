@@ -46,7 +46,7 @@ const startAdminJS = async () => {
 
 
 const adminOptions = {
-    rootPath: "/admin",
+    rootPath: "/",
     resources: routes(mongooseDB),
   };
 
